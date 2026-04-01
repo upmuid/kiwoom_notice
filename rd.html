@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="3;url=https://ofw.adison.co/u/naverpay/ads/1023913?from=ad_list&aot_source=pincrux&aot_medium=a_pincrux_cps_r_2">
+  <title>페이지 이동 중...</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f4ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+      max-width: 420px;
+      width: 90%;
+    }
+    .spinner {
+      width: 52px;
+      height: 52px;
+      border: 5px solid #e8eeff;
+      border-top-color: #4f6ef7;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto 24px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    h2 { font-size: 18px; color: #1a1a2e; margin-bottom: 10px; }
+    p { font-size: 13px; color: #888; margin-bottom: 28px; line-height: 1.6; }
+    .countdown { font-size: 36px; font-weight: 700; color: #4f6ef7; margin-bottom: 24px; }
+    a.btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #4f6ef7;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    a.btn:hover { background: #3a56d4; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="spinner"></div>
+    <h2>페이지를 이동합니다</h2>
+    <p>잠시 후 자동으로 이동됩니다.<br>이동하지 않으면 아래 버튼을 클릭하세요.</p>
+    <div class="countdown" id="count">3</div>
+    <a class="btn" href="https://ofw.adison.co/u/naverpay/ads/1023913?from=ad_list&aot_source=pincrux&aot_medium=a_pincrux_cps_r_2">지금 바로 이동 →</a>
+  </div>
+  <script>
+    const target = "https://ofw.adison.co/u/naverpay/ads/1023913?from=ad_list&aot_source=pincrux&aot_medium=a_pincrux_cps_r_2";
+    let c = 3;
+    const el = document.getElementById('count');
+    const timer = setInterval(() => {
+      c--;
+      el.textContent = c;
+      if (c <= 0) { clearInterval(timer); window.location.href = target; }
+    }, 1000);
+  </script>
+</body>
+</html>
